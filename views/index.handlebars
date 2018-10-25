@@ -1,7 +1,12 @@
-<h1>Burgers!</h1>
+<h1>The Dirty Burger</h1>
+<p>
+“	I got my boys, I got my burgers, that’s all I got, I need to hear a bam!	”
+– Phil Collins</p>
+<br>
 
+<div id="container">
+<div id="first">
 <h2>Burgers that have not been eaten!</h2>
-
 <ul>
   {{#each burgers}}
     {{#unless status}}
@@ -9,9 +14,10 @@
     {{/unless}}
   {{/each}}
 </ul>
+</div>
 
+<div id="second">
 <h2>Burgers that have been eaten!</h2>
-
 <ul>
   {{#each burgers}}
     {{#if status}}
@@ -20,18 +26,20 @@
   {{/each}}
 </ul>
 
+<div id="clear"></div>
+</div>
+
+</div>
+
+<br>
+<div id="container">
 <h2>Add a Burger</h2>
 <form class="create-form">
   <label for="burger">Burger Name:</label>
     <input type="text" id="bu" name="name">
   </div>
+  
 
-  <div class="form-group">
-    <label for="status">Eaten?</label><br>
-    <input type="status" name="eaten" value="1" checked> Eaten!<br>
-    <input type="status" name="eaten" value="0">Not Eaten 
-  </div>
-
-  <button type="submit">Add Burger</button>
+<button type="submit">Add Burger</button>
 
 </form>

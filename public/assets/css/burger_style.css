@@ -1,7 +1,35 @@
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
+}
+
+h2 {
+  display: inline-block;
+}
+
+#first{
+  float: left;
+  width:50%;
+}
+
+#second {
+  float: right;
+  width: 50%;
+}
+
+#clear {
+  clear: both;
+}
+
+p{
+  font-size: 35px;
+}
+
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: peru;
+  width:40%;
 }
 
 .label {
