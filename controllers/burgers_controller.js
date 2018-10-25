@@ -1,8 +1,8 @@
-const express = require("express");
+var express = require("express");
 
-const router = express.Router();
+var router = express.Router();
 
-const burger = require("../models/burger.js");
+var burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
   burger.all(function(data) {
@@ -16,9 +16,9 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res) {
   burger.create([
-    "name", "eaten"
+    "name", "status"
   ], [
-    req.body.name, req.body.eaten
+    req.body.name, req.body.status
   ], function(result) {
     res.json({ id: result.insertId });
   });
@@ -30,7 +30,7 @@ router.put("/api/burgers/:id", function(req, res) {
   console.log("condition", condition);
 
   burger.update({
-    gooey: req.body.eaten
+    gooey: req.body.status
   }, condition, function(result) {
     if (result.changedRows == 0) {
       return res.status(404).end();
